@@ -35,3 +35,4 @@
 *.vcxproj
 *.filters
 *.user
+*Debug/
