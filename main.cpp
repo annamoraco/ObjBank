@@ -1,24 +1,25 @@
 #include <iostream>
 #include <string>
+#include <clocale>
 #include "Conta.hpp"
 
 using namespace std;
 
+void exibesaldo(const Conta& conta ) {
+    cout << "O saldo da conta é: R$" << conta.recuperarSaldo() << endl;
+}
+
 int main(){
 
-    Conta umaConta;
-    umaConta.numero = "123456";
-    umaConta.cpf = "123.456.789.10";
-    umaConta.nome = "Anna";
-    umaConta.saldo = 1000;
+    setlocale(LC_ALL, "");
 
-    Conta outraConta;
-    outraConta.saldo = 500;
-
+    Conta umaConta("123456","Anna","123.456.789-10");
+    Conta outraConta("789412","Rodrigo","789.123.456-78");
+    
     outraConta.depositar(300);
     umaConta.sacar(200);
 
-    cout << "Uma conta: " << umaConta.saldo << " Outra conta: " << outraConta.saldo << endl;
+    exibesaldo(outraConta);
 
     return 0;
 }
