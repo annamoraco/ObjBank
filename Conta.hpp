@@ -23,4 +23,6 @@ public:
     float recuperarSaldo() const;
     std::string recuperarNomeTitular() const;
     std::string recuperarCpfTitular() const;
+private:
+    void verificaTamanhoNome();
 };

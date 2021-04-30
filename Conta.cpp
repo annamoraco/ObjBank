@@ -6,6 +6,7 @@ int Conta::numerodecontas = 0;
 Conta::Conta(std::string numero, std::string nome, std::string cpf):
     numero(numero), nome(nome), cpf(cpf), saldo(0)
 {
+    verificaTamanhoNome();
     numerodecontas++;
 }
 
@@ -27,6 +28,13 @@ void Conta::sacar(float valorASacar) {
 
 void Conta::depositar(float valorADepositar) {
     saldo += valorADepositar;
+}
+
+void Conta::verificaTamanhoNome() {
+    if (nome.size() < 5) {
+        std::cout << "Nome muito curto." << std::endl;
+        exit(1);
+    }
 }
 
 // GETTER
