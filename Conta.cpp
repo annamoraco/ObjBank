@@ -9,6 +9,10 @@ Conta::Conta(std::string numero, std::string nome, std::string cpf):
     numerodecontas++;
 }
 
+Conta::~Conta() {
+    numerodecontas--;
+}
+
 void Conta::sacar(float valorASacar) {
     if (valorASacar < 0) {
         std::cout << "Não pode sacar valor negativo" << std::endl;

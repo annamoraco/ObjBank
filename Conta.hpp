@@ -16,7 +16,8 @@ private:
     float saldo;
 
 public:
-    Conta(std::string numero, std::string nome, std::string cpf);
+    Conta(std::string numero, std::string nome, std::string cpf); // construtor
+    ~Conta();
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
     float recuperarSaldo() const;

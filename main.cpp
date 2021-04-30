@@ -6,6 +6,7 @@
 using namespace std;
 
 void exibesaldo(const Conta& conta ) {
+    Conta outraContaDesnecessaria("789412", "Rodrigo", "789.123.456-78");
     cout << "O saldo da conta é: R$" << conta.recuperarSaldo() << endl;
 }
 
