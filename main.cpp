@@ -21,5 +21,7 @@ int main(){
 
     exibesaldo(outraConta);
 
+    cout << "Numero de contas: " << Conta::retornanumerodecontas();
+
     return 0;
 }
