@@ -16,6 +16,4 @@ public:
     float recuperarSaldo() const;
     std::string recuperarNomeTitular() const;
     std::string recuperarCpfTitular() const;
-    void definirNomeTitular(std::string Nome);
-    void definirCpfTitular(std::string CPF);
 };

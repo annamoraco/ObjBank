@@ -1,12 +1,9 @@
 #include "Conta.hpp"
 #include <iostream>
 
-Conta::Conta(std::string numero, std::string nome, std::string cpf)
+Conta::Conta(std::string numero, std::string nome, std::string cpf):
+    numero(numero), nome(nome), cpf(cpf), saldo(0)
 {
-    this->numero = numero;
-    this->nome = nome;
-    this->cpf = cpf;
-    this->saldo = 0;
 }
 
 void Conta::sacar(float valorASacar) {
@@ -40,7 +37,7 @@ std::string Conta::recuperarCpfTitular() const {
     return cpf;
 }
 
-// SETTER
+/* // SETTER
 
 void Conta::definirNomeTitular(std::string Nome) {
     nome = Nome;
@@ -49,3 +46,4 @@ void Conta::definirNomeTitular(std::string Nome) {
 void Conta::definirCpfTitular(std::string CPF) {
     cpf = CPF;
 }
+*/
