@@ -3,7 +3,6 @@
 
 Cpf::Cpf(std::string cpf) : cpf(cpf)
 {
-
 }
 
 std::string Cpf::recuperarCpfTitular() const {

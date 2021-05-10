@@ -8,7 +8,7 @@ private:
 	std::string cpf;
 
 public:
-	Cpf(std::string cpf);
+	explicit Cpf(std::string cpf);
 	std::string recuperarCpfTitular() const;
 };
 
