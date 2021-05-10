@@ -3,10 +3,9 @@
 
 int Conta::numerodecontas = 0;
 
-Conta::Conta(std::string numero, std::string nome, std::string cpf):
-    numero(numero), nome(nome), cpf(cpf), saldo(0)
+Conta::Conta(std::string numero, Titular titular):
+    numero(numero), titular(titular), saldo(0)
 {
-    verificaTamanhoNome();
     numerodecontas++;
 }
 
@@ -30,13 +29,6 @@ void Conta::depositar(float valorADepositar) {
     saldo += valorADepositar;
 }
 
-void Conta::verificaTamanhoNome() {
-    if (nome.size() < 5) {
-        std::cout << "Nome muito curto." << std::endl;
-        exit(1);
-    }
-}
-
 // GETTER
 
 float Conta::recuperarSaldo() const
@@ -44,13 +36,6 @@ float Conta::recuperarSaldo() const
     return saldo;
 }
 
-std::string Conta::recuperarNomeTitular() const {
-    return nome;
-}
-
-std::string Conta::recuperarCpfTitular() const {
-    return cpf;
-}
 
 int Conta::retornanumerodecontas() {
     return numerodecontas;
