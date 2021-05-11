@@ -4,7 +4,7 @@
 
 class Pessoa
 {
-private:
+protected:
 	Cpf cpf;
 	std::string nome;
 

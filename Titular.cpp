@@ -6,9 +6,9 @@ Titular::Titular(std::string nome, Cpf cpf) : Pessoa(nome,cpf)
 
 }
 
-/*
-std::string Titular::recuperarNomeTitular() const {
+
+std::string Titular::recuperarNomeTitular()  {
     return nome;
 }
-*/
+
 

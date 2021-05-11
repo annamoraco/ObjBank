@@ -7,9 +7,8 @@ class Titular : public Pessoa
 {
 public:
 	Titular(std::string nome, Cpf cpf);
-	/*
-public:
-	std::string recuperarNomeTitular() const;
-	*/
+
+	std::string recuperarNomeTitular();
+
 };
 
