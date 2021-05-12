@@ -5,6 +5,7 @@
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
+#include "ContaPoupanca.hpp"
 
 using namespace std;
 
@@ -18,11 +19,11 @@ int main(){
     setlocale(LC_ALL, "");
 
     Conta umaConta("123456",Titular("Anna Giuglia", Cpf("123.456.789-10")));
-    Conta outraConta("789412", Titular("Rodrigo",Cpf("789.123.456-78")));
+    ContaPoupanca outraConta("789412", Titular("Rodrigo",Cpf("789.123.456-78")));
     
-    outraConta.depositar(300);
-    umaConta.sacar(200);
-
+    outraConta.depositar(500);
+    outraConta.sacar(200);
+    
     exibesaldo(outraConta);
 
     cout << "Numero de contas: " << Conta::retornanumerodecontas() << endl;
