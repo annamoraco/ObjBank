@@ -7,12 +7,18 @@
 #include "Funcionario.hpp"
 #include "ContaPoupanca.hpp"
 #include "ContaCorrente.hpp"
+#include "Gerente.hpp"
 
 using namespace std;
 
 void exibesaldo(const Conta& conta ) {
     
     cout << "O saldo da conta é: R$" << conta.recuperarSaldo() << endl;
+}
+
+void exibebonificacao(const Funcionario& funcionario) {
+
+    cout << "A bonificação do funcionário é: R$" << funcionario.bonificacao()<< endl;
 }
 
 int main(){
@@ -34,7 +40,9 @@ int main(){
 
     cout << "Numero de contas: " << Conta::retornanumerodecontas() << endl;
 
-    Funcionario funcionario("Anna Moraco", Cpf("368.978.128-03"), 1250);
+    Gerente gerente("Anna Moraco", Cpf("368.978.128-03"), 7250);
+
+    exibebonificacao(gerente);
 
     return 0;
 }

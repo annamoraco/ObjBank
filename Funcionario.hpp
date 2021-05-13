@@ -10,5 +10,8 @@ private:
 
 public:
 	Funcionario(std::string nome, Cpf cpf, float salario);
+	std::string recuperaNome() const ;
+	float recuperaSalario() const;
+	virtual float bonificacao() const = 0;
 };
 
