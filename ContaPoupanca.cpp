@@ -22,7 +22,9 @@ void ContaPoupanca::sacar(float valorASacar) {
     saldo -= valorSaque;
 }
 
+/*
 void ContaPoupanca::depositar(float valorADepositar) {
     saldo += valorADepositar;
 }
+*/
 
